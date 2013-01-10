@@ -1,24 +1,33 @@
-module.exports = function gray (n, terms) {
-    if (n === 0) return [];
+module.exports = function gray (bits, terms) {
+    if (bits === 0) return [];
     if (terms === undefined) terms = [ false, true ];
     if (typeof terms === 'number') {
         var terms_ = [];
         for (var i = 0; i < terms; i++) terms_.push(i);
         terms = terms_;
     }
-    if (n === 1) return terms.map(lift);
+    if (bits === 1) return terms.map(lift);
     
-    var xs = gray(n - 1);
-    var m = xs.length;
-    var res = [];
+    var radix = terms.length;
+    var codes = [];
+    var max = Math.pow(radix, bits);
     
-    for (var i = 0; i < m; i++) {
-        res.push([ false ].concat(xs[i]));
+    for (var n = 0; n < max; n++) {
+        var res = [];
+        var shift = 0;
+        
+        for (var j = bits - 1; j >= 0; j--) {
+            var x = (digit(n, radix, j) + shift) % radix;
+            shift += radix - x;
+            res.push(terms[x]);
+        }
+        codes.push(res);
     }
-    for (var i = m - 1; i >= 0; i--) {
-        res.push([ true ].concat(xs[i]));
-    }
-    return res;
+    return codes;
 };
 
 function lift (x) { return [x] }
+
+function digit (n, radix, i) {
+    return Math.floor(n / Math.pow(radix, i)) % radix;
+}
