@@ -1,0 +1,33 @@
+{
+    "name" : "gray-code",
+    "version" : "0.0.0",
+    "description" : "n-ary gray codes of radix k",
+    "main" : "index.js",
+    "devDependencies" : {
+        "tape" : "~0.1.5",
+        "tap" : "~0.3.0"
+    },
+    "scripts" : {
+        "test" : "tap test/*.js"
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "git://github.com/substack/gray-code.git"
+    },
+    "homepage" : "https://github.com/substack/gray-code",
+    "keywords" : [
+        "(n,k)",
+        "gray",
+        "digit",
+        "radix",
+        "binary",
+        "ternary",
+        "boolean"
+    ],
+    "author" : {
+        "name" : "James Halliday",
+        "email" : "mail@substack.net",
+        "url" : "http://substack.net"
+    },
+    "license" : "MIT"
+}

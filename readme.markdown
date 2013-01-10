@@ -1,6 +1,6 @@
 # gray-code
 
-(n,k) gray codes: n-ary codes with k digits
+`n`-ary gray codes of radix `k`
 
 # example
 
