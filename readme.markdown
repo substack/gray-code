@@ -2,6 +2,10 @@
 
 `n`-ary gray codes of radix `k`
 
+[![browser support](http://ci.testling.com/substack/gray-code.png)](http://ci.testling.com/substack/gray-code)
+
+[![build status](https://secure.travis-ci.org/substack/gray-code.png)](http://travis-ci.org/substack/gray-code)
+
 # example
 
 ```
