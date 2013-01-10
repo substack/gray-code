@@ -1,6 +1,6 @@
 module.exports = function gray (bits, terms) {
     if (bits === 0) return [];
-    if (terms === undefined) terms = [ false, true ];
+    if (terms === undefined) terms = [ 0, 1 ];
     if (typeof terms === 'number') {
         var terms_ = [];
         for (var i = 0; i < terms; i++) terms_.push(i);
