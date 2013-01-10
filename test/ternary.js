@@ -14,8 +14,8 @@ var codes = [
 
 test('ternary', function (t) {
     t.plan(4);
-    t.same(gray(0, 3), codes[0], '0-bit ternary');
-    t.same(gray(1, 3), codes[1], '1-bit ternary');
-    t.same(gray(2, 3), codes[2], '2-bit ternary');
-    t.same(gray(3, 3), codes[3], '3-bit ternary');
+    t.same(gray(0, 3), codes[0], '0-digit ternary');
+    t.same(gray(1, 3), codes[1], '1-digit ternary');
+    t.same(gray(2, 3), codes[2], '2-digit ternary');
+    t.same(gray(3, 3), codes[3], '3-digit ternary');
 });
